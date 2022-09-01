@@ -2,7 +2,7 @@ import React from 'react'
 
 const Shafyr = () => {
   return (
-    <div>Shafyr</div>
+    <div>Shafiuyr Rahman</div>
   )
 }
 
