@@ -1,9 +1,18 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
-const Shafyr = () => {
+const App = () => {
+
+  const products = useSelector(state => state.products)
+
   return (
-    <div>Shafiuyr Rahman</div>
+    <>
+      {products.map(product => <div key={product.id}> {product.name}--{product.price}</div>)
+      }
+      <p>fjfjdfjdl</p>
+
+    </>
   )
 }
 
-export default Shafyr
+export default App
