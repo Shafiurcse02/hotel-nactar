@@ -2,6 +2,8 @@ import React from 'react';
 import { useSelector } from "react-redux";
 import { Login } from './components/Login';
 import {Registration} from "./components/Registration";
+import Home from './components/Home';
+import Auth from './components/Auth';
 
 const App = () => {
 
@@ -11,13 +13,7 @@ const App = () => {
 
   return (
     <>
-      {products.map(product => <div key={product.id}> {product.name}--{product.price}</div>)}
-
-      {user.map(u => <div key={u.id}> {u.name}--{u.fName}</div>)}
-      <Registration/>
-      <Login/>
-
-
+     <Auth/>
     </>
   )
 }
