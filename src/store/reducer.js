@@ -17,7 +17,7 @@ const initalState = {
     {
         id: 3,
         name: "mobile",
-        price: 25050
+        price: 25060
     }],
     card: []
 
