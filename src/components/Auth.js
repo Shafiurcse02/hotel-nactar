@@ -38,26 +38,26 @@ const Auth = () => {
                     alignItems="center"
                     justifyContent={"center"}
                     margin="auto"
-                    marginTop={5}
+                    marginTop={10}
                     padding={3}
                     borderRadius={5}
-                    boxShadow={'5px 5px 10px #ccc'}
+                    boxShadow={'5px 5px 10px #78cd'}
                     sx={{
                         ":hover": {
                             boxShadow: ' 10px 10px 20px #ccc'
                         }
                     }}
                 >
-                    <Typography variant='h2' padding={3} textAlign="center">
+                    <Typography variant='h4' textAlign="center">
 
-                        {isSignUp ? "Login Page" : "SignUp Page"}
+                        {!isSignUp ? "Login Page" : "SignUp Page"}
 
                     </Typography>
-                    {isSignUp && <TextField onChange={changHandler} label="Name" margin='normal' value={inputs.name} name='name' type={"text"} variant="outlined" placeholder='Enter Name' />}
-                    <TextField label="email" onChange={changHandler} margin='normal' type={"text"} value={inputs.email} name='email' variant="outlined" placeholder='Enter Email' />
+                    {isSignUp && <TextField fullWidth="true" onChange={changHandler} label="Name" margin='normal' value={inputs.name} name='name' type={"text"} variant="outlined" placeholder='Enter Your Name' />}
+                    <TextField label="email" fullWidth="true" onChange={changHandler} margin='normal' type={"text"} value={inputs.email} name='email' variant="outlined" placeholder='Enter Email' />
 
-                    <TextField label="pwd" onChange={changHandler} margin='normal' type={"text"} value={inputs.pwd} name='pwd' variant="outlined" placeholder='Enter Password' />
-                    {isSignUp && <TextField onChange={changHandler} label="phn" margin='normal' value={inputs.phn} name='phn' type={"text"} variant="outlined" placeholder='Enter Phone' />}
+                    <TextField label="pwd" fullWidth="true" onChange={changHandler} margin='normal' type={"text"} value={inputs.pwd} name='pwd' variant="outlined" placeholder='Enter Password' />
+                    {isSignUp && <TextField onChange={changHandler} label="phn" fullWidth="true" margin='normal' value={inputs.phn} name='phn' type={"text"} variant="outlined" placeholder='Enter Phone' />}
                     <Button endIcon={!isSignUp ? <LoginOutlinedIcon /> : <HowToRegOutlinedIcon />} type='submit' sx={{ marginTop: 3, borderRadius: 4 }} variant='contained' color='warning'>
                         {!isSignUp ? "Login" : "Sign Up"}
                     </Button>
