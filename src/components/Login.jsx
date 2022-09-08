@@ -47,7 +47,7 @@ const Login = () => {
                             boxShadow: ' 10px 10px 20px #ccc'
                         }
                     }}
-                >
+                >11
                     <Typography variant='h4' textAlign="center">
 
                         {!isSignUp ? "Login Page" : "SignUp Page"}
