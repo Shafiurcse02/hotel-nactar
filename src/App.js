@@ -13,7 +13,8 @@ import Auth from './components/Auth';
 import Navbar from './components/Navbar';
 import ABout from './components/ABout';
 import Contact from './components/Contact';
-const linkArray = ["Home", "Contact", "About", "Login"];
+import Profile from './components/Profile';
+const linkArray = ["Home", "Contact", "About", "Login", "Profile"];
 
 const App = () => {
 
@@ -33,6 +34,8 @@ const App = () => {
           <Route path='/contact' element={<Contact />} />
           <Route path='/Home' element={<Home />} />
           <Route path='/About' element={<ABout />} />
+          <Route path='/Profile' element={<Profile />} />
+          
         </Routes> 
         
       </Router>

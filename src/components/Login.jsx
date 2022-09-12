@@ -63,7 +63,7 @@ const Login = () => {
                     </Button>
                     <Button onClick={resetData} sx={{ marginTop: 3, borderRadius: 4 }}>
 
-                        Go to {isSignUp ? "Login" : "Reg Page"} Page Shafiur
+                        Go to {isSignUp ? "Login" : "Reg Page"} Page.
                     </Button>
 
                 </Box>
