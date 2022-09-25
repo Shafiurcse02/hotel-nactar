@@ -1,6 +1,9 @@
-FROM node:18-alpine3.15
+FROM node:18-alpine
 WORKDIR /hotel-nactar
 ENV PATH="./node_modules./bin:$PATH"
+COPY package.json .
+RUN npm install
 COPY . .
-RUN npm run build
+
+
 CMD ["npm",  "start"]
