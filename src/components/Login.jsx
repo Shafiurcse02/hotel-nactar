@@ -17,7 +17,7 @@ const Login = () => {
         }
         ));
     }
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         console.log("Sub");
         console.log(inputs);
@@ -53,11 +53,11 @@ const Login = () => {
                         {!isSignUp ? "Login Page" : "SignUp Page"}
 
                     </Typography>
-                    {isSignUp && <TextField fullWidth="true" onChange={changHandler} label="Name" margin='normal' value={inputs.name} name='name' type={"text"} variant="outlined" placeholder='Enter Your Name' />}
-                    <TextField label="email" fullWidth="true" onChange={changHandler} margin='normal' type={"text"} value={inputs.email} name='email' variant="outlined" placeholder='Enter Email' />
+                    {isSignUp && <TextField fullWidth="true" onChange={changHandler} label="Name" margin='normal' value={inputs.name} name='name' type={"text"} variant="outlined" placeholder='Enter Your Name' required/>}
+                    <TextField label="email" fullWidth="true" onChange={changHandler} margin='normal' type={"text"} value={inputs.email} name='email' variant="outlined" placeholder='Enter Email' required/>
 
-                    <TextField label="pwd" fullWidth="true" onChange={changHandler} margin='normal' type={"text"} value={inputs.pwd} name='pwd' variant="outlined" placeholder='Enter Password' />
-                    {isSignUp && <TextField onChange={changHandler} label="phn" fullWidth="true" margin='normal' value={inputs.phn} name='phn' type={"text"} variant="outlined" placeholder='Enter Phone' />}
+                    <TextField label="pwd" fullWidth="true" onChange={changHandler} margin='normal' type={"password"} value={inputs.pwd} name='pwd' variant="outlined" placeholder='Enter Password' required/>
+                    {isSignUp && <TextField onChange={changHandler} label="phn" fullWidth="true" margin='normal' value={inputs.phn} name='phn' type={"text"} variant="outlined" placeholder='Enter Phone' required/>}
                     <Button endIcon={!isSignUp ? <LoginOutlinedIcon /> : <HowToRegOutlinedIcon />} type='submit' sx={{ marginTop: 3, borderRadius: 4 }} variant='contained' color='warning'>
                         {!isSignUp ? "Login" : "Sign Up"}
                     </Button>
