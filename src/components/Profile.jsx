@@ -2,7 +2,9 @@ import React from 'react'
 
 const Profile = () => {
   return (
-    <div>Profile Page By Shafiur Rahman baNGLADESH</div>
+    <div>
+      <h1>NACTAR Profile Page By Shafiur Rahman baNGLADESH</h1>
+    </div>
   )
 }
 

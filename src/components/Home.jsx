@@ -35,9 +35,6 @@ const Home = () => {
    loadUserData();
    
   }, []);
-
-
-
   const loadUserData= async()=>{
     const resultData= await axios.get('http://localhost:8081/author/getAll/');
     console.log(resultData);
