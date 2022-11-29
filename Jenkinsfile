@@ -10,7 +10,7 @@ pipeline {
          stage('Publish') {
             steps {
                withDockerRegistry([ credentialsId: "docker-hub", url: "" ]){
-                   sh ' docker run -p 15:3000 shafiurcse/hotel-shafiur:""$BUILD_ID""'
+               sh 'docker run -p 15:3000 shafiurcse/hotel-shafiur:""$BUILD_ID""'
                sh 'docker push shafiurcse/hotel-shafiur:""$BUILD_ID""'
                 }
             }
