@@ -9,7 +9,8 @@ pipeline {
         }
          stage('Publish') {
             steps {
-               withDockerRegistry([ credentialsId: "docker-hub", url: "" ]){                    
+               withDockerRegistry([ credentialsId: "docker-hub", url: "" ]){
+                   sh ' docker run -p 15:3000 shafiurcse/hotel-nactar:""$BUILD_ID""'
                sh 'docker push shafiurcse/hotel-nactar:""$BUILD_ID""'
                 }
             }
