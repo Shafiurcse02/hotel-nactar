@@ -2,11 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('clone') {
-            steps {
-             git credentialsId: 'github', url: 'https://github.com/Shafiurcse02/hotel-nactar.git'
-            }
-        }
         stage('Build') {
             steps {
              sh 'docker build --tag shafiurcse/hotel-nactar:""$BUILD_ID"" .'
